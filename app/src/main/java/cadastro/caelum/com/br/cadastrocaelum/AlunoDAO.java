@@ -28,7 +28,7 @@ public class AlunoDAO {
     }
     public void altera(Aluno aluno) {
         String[] args = {aluno.getId().toString()};
-        dbHelper.getWritableDatabase().update(DBHelper.TABELA_ALUNOS, toValues(aluno), "id = ?", args );
+        dbHelper.getWritableDatabase().update(DBHelper.TABELA_ALUNOS, toValues(aluno), "id = ?", args);
 
     }
     private ContentValues toValues(Aluno aluno) {
@@ -64,6 +64,16 @@ public class AlunoDAO {
     public void deletar(Aluno aluno){
         String[] args = {aluno.getId().toString()};
         dbHelper.getWritableDatabase().delete(DBHelper.TABELA_ALUNOS, "id = ? ", args);
+    }
+    public boolean isAluno(String telefone) {
+
+        Cursor rawQuery = dbHelper.getReadableDatabase().rawQuery("SELECT telefone from " + DBHelper.TABELA_ALUNOS
+                + " WHERE telefone = ?", new String[]{telefone});
+
+        boolean existe = rawQuery.moveToFirst();
+        rawQuery.close();
+
+        return existe;
     }
 
 
