@@ -1,4 +1,4 @@
-package adapter.cadastro.caelum.com.br.cadastrocaelum;
+package adapter.caelum.com.br.cadastrocaelum;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -11,9 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import cadastro.caelum.com.br.cadastrocaelum.ListaAlunosActivity;
 import cadastro.caelum.com.br.cadastrocaelum.R;
-import modelo.cadastro.caelum.com.br.cadastrocaelum.Aluno;
+import modelo.caelum.com.br.cadastrocaelum.Aluno;
 
 /**
  * Created by IT-CPS on 23/06/2015.

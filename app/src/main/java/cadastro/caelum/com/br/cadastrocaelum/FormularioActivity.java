@@ -10,7 +10,8 @@ import android.widget.Button;
 
 import java.io.File;
 
-import modelo.cadastro.caelum.com.br.cadastrocaelum.Aluno;
+import modelo.caelum.com.br.cadastrocaelum.Aluno;
+
 
 /**
  * Created by IT-CPS on 11/06/2015.

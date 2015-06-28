@@ -1,4 +1,4 @@
-package modelo.cadastro.caelum.com.br.cadastrocaelum;
+package modelo.caelum.com.br.cadastrocaelum;
 
 import java.io.Serializable;
 

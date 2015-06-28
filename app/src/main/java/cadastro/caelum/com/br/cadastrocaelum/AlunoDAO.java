@@ -9,7 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import modelo.cadastro.caelum.com.br.cadastrocaelum.Aluno;
+import modelo.caelum.com.br.cadastrocaelum.Aluno;
+
 
 /**
  * Created by IT-CPS on 12/06/2015.

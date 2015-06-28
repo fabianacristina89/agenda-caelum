@@ -10,12 +10,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import adapter.cadastro.caelum.com.br.cadastrocaelum.ListaAlunosAdapter;
-import modelo.cadastro.caelum.com.br.cadastrocaelum.Aluno;
+import java.util.List;
+
+import adapter.caelum.com.br.cadastrocaelum.ListaAlunosAdapter;
+import converter.caelum.com.br.cadastrocaelum.AlunoConverter;
+import modelo.caelum.com.br.cadastrocaelum.Aluno;
 
 /**
  * Created by IT-CPS on 11/06/2015.
@@ -75,6 +77,14 @@ public class ListaAlunosActivity extends AppCompatActivity {
                 Intent irParaFormulario = new Intent(ListaAlunosActivity.this, FormularioActivity.class);
                 startActivity(irParaFormulario);
                 break;
+            case R.id.menu_enviar_alunos:
+                List<Aluno> alunos = alunoDAO.getLista();
+                dbHelper.close();
+
+                String json = new AlunoConverter().toJSON(alunos);
+
+                Toast.makeText(this, json, Toast.LENGTH_LONG).show();
+                return false;
             default:
                 break;
         }

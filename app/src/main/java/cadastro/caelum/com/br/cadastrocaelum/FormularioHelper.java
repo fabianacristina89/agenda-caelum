@@ -7,7 +7,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
-import modelo.cadastro.caelum.com.br.cadastrocaelum.Aluno;
+import modelo.caelum.com.br.cadastrocaelum.Aluno;
+
 
 public class FormularioHelper {
 
